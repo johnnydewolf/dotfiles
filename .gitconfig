@@ -1,0 +1,38 @@
+[alias]
+  br = branch
+  cm = commit
+  co = checkout
+  conb = checkout -b
+  cos = checkout --recurse-submodules
+  di = diff
+  fe = fetch
+  lo = log -p
+  sco = checkout --recurse-submodules
+  sco = submodule update --recursive
+  sconb = checkout --recurse-submodules -b
+  sdiff = !git diff && git submodule foreach 'git diff'
+  sdiff = git diff && git submodule foreach 'git diff'
+  spush = push --recurse-submodules=on-demand
+  spush = push --recurse-submodules=on-demand
+  st = status
+  supdate = submodule update --remote --merge
+  supdate = submodule update --remote --merge
+
+[user]
+  name=John de Wolf
+  email=jdewolf@tesla.com
+  signingkey = AJWXZ2SVWNADWS4B7XVP9TPPRANHKFP9FFA6LP4W
+
+[core]
+  excludesfile=~/.gitignore
+
+[color]
+  status = auto
+  branch = auto
+  diff = auto
+
+[push]
+  default = simple
+
+[url "ssh://git@stash.teslamotors.com:7999"]
+  insteadOf = https://stash.teslamotors.com/scm
